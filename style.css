@@ -1,6 +1,120 @@
-table tr th{
-  background:#337ab7;
-  color:white;
-  text-align:left;
-  vertical-align:center;
+body {
+  font-family: Poppins,sans-serif;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #edf1f5;
+}
+
+.panel {
+  background: transparent;
+}
+
+.col-sm-12{
+  overflow: auto;
+  width: 100%;
+}
+
+
+.table th, .table thead th {
+  font-weight: 500;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  background-color: #fafafa;
+  border-bottom: 2px solid #e9ecef;
+}
+.table td, .table th {
+  padding: 1rem;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
+.table tr:hover {
+background-color: #f9f9f9;
+cursor: pointer;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background: #0f2e4610;
+}
+
+form label, table th {
+  font-weight: 400;
+}
+th {
+  text-align: inherit;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid transparent;
+  border-radius: 0;
+  margin-top: 30px;
+  -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.03);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.card .card-title{
+  position: relative;
+}
+.card-title {
+  margin-bottom: .75rem;
+}
+
+.pagination>.active>a {
+  border-radius: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1693f8), to(#0d67e9));
+  background-image: linear-gradient(#1693f8, #0d67e9);
+  width: 36px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 2px 3.464px 8px 0px rgba(22, 145, 248, 0.18);
+  box-shadow: 2px 3.464px 8px 0px rgba(22, 145, 248, 0.18);
+  cursor: pointer;
+  position: relative;
+}
+
+.pagination>li>a {
+  border: 0px;
 }

@@ -1,7 +1,8 @@
 //Angularjs and jquery.datatable with ui.bootstrap and ui.utils
 
 var app=angular.module('formvalid', ['ui.bootstrap','ui.utils']);
-app.controller('validationCtrl',function($scope,$http){
+let requiredColumns = ['id', 'employee_name', 'employee_salary', 'employee_age', 'profile_image'];
+app.controller('validationCtrl',function($scope,$http,$uibModal){
 
 
   function refreshTable() {
@@ -21,11 +22,11 @@ app.controller('validationCtrl',function($scope,$http){
         
         for(var i in data){
             var row = [];
-            row.push(data[i].id);
-            row.push(data[i].employee_name);
-            row.push(data[i].employee_salary);
-            row.push(data[i].employee_age);
-            row.push(data[i].profile_image);
+            row.push(data[i][requiredColumns[0]]);
+            row.push(data[i][requiredColumns[1]]);
+            row.push(data[i][requiredColumns[2]]);
+            row.push(data[i][requiredColumns[3]]);
+            row.push(data[i][requiredColumns[4]]);
             userData.push(row);
         }
         refreshTable();
@@ -42,24 +43,29 @@ app.controller('validationCtrl',function($scope,$http){
     getRequest();
   })
 
-$scope.dataTableOpt = {
-  "aLengthMenu": [[25, 50, 100,-1], [25, 50, 100,'All']],
-  };
-});
-
-app.controller('ModalDemoCtrl', function ($scope, $uibModal) {
-
-  $scope.open = function () {    
+  $scope.open = function (data) {    
     $uibModal.open({
       animation: true,
       templateUrl: 'myModalContent.html',
       controller: 'ModalInstanceCtrl',
-      size: 'lg'
+      size: 'lg',
+      resolve: {
+        passData: function () {
+          return data;
+        }
+      }
     });
-}
-  
-})
-app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
+  }
+
+$scope.dataTableOpt = {
+  "aLengthMenu": [[20, 50, 100,-1], [20, 50, 100,'All']],
+  };
+});
+
+app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, passData) {
+
+  $scope.myData = passData;
+  $scope.columns = requiredColumns;
 
   $scope.ok = function () {
     $uibModalInstance.close();
