@@ -11,31 +11,35 @@
 <body>
 
 
-    <div class="container" ng-app="myApp">
-        <div class="row">
-          <div class="col-lg-12">
-      <div ng-controller="ModalDemoCtrl">
-          <script type="text/ng-template" id="myModalContent.html">
-              <div class="modal-header">
-                  <h3 class="modal-title">I'm a modal!</h3>
-              </div>
-              <div class="modal-body">
-                  <p>here we are!!!</p>
-              </div>
-              <div class="modal-footer">
-                  <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-                  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-              </div>
-          </script>
-      
-          <button type="button" class="btn btn-default" ng-click="open()">Click</button>
-        
-      </div>
-          </div>
-        </div>
-      </div>
 
 <div class="container" ng-app="formvalid">
+
+ 
+<div class="row">
+    <div class="col-lg-12">
+<div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <button type="button" class="btn btn-default" ng-click="open()">Click</button>
+  
+</div>
+    </div>
+  </div> 
+
   <div class="panel" data-ng-controller="validationCtrl">
   <div ng-If="data.length > 0">
   <div class="panel-heading border">    
@@ -68,6 +72,8 @@
   </div>
   </div>
 </div>
+ 
+
 </div>
 <!-- partial -->
   <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
@@ -77,7 +83,6 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js'></script>
 <script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
 <script  src="./script.js"></script>
-<script  src="./modal.js"></script>
 
 </body>
 </html>
