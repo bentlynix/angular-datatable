@@ -16,7 +16,7 @@ body {
 
 
 .table th, .table thead th {
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .table thead th {
@@ -117,4 +117,41 @@ tbody {
 
 .pagination>li>a {
   border: 0px;
+}
+
+.badge-soft-success {
+  background-color: rgba(67,211,158,.2);
+  color: #43d39e!important;
+}
+
+.badge-soft-warning {
+  background-color: rgba(255,190,11,.2);
+  color: #ffbe0b!important;
+}
+
+.badge-soft-danger {
+  background-color: rgba(255,92,117,.2);
+  color: #ff5c75!important;
+}
+
+.pb-1, .py-1 {
+  padding-bottom: .25rem!important;
+}
+.pt-1, .py-1 {
+  padding-top: .25rem!important;
+}
+.badge {
+  display: inline-block;
+  padding: .3em .5em;
+  font-size: 82%;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .2rem;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
 }

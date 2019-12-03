@@ -38,7 +38,10 @@
   <div class="card">
     <div class="card-body">
   <div class="panel-heading border">    
-    <div class="card-title">Data table</div>
+    <div class="row">
+    <div class="col-lg-10 card-title">Data table</div>
+     <div class="col-lg-1 text-center"> <button type="button" class="btn btn-primary">Export Data</button></div>
+    </div>
   </div>
   <div class="panel-body">
       <table id="example" class="table table-striped datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -59,7 +62,7 @@
             <td>{{n[1]}}</td>
             <td>{{n[2]}}</td>
             <td>{{n[3]}}</td>
-            <td>{{n[4] | date:'dd/MM/yyyy'}}</td>
+            <td><span class="badge badge-soft-success py-1">Delivered</span></td>
           </tr>
         </tbody>
     </table>
