@@ -66,8 +66,18 @@ app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, passDat
 
   $scope.myData = passData;
   $scope.columns = requiredColumns;
+  $scope.passColumns = [];
+
+  $scope.change = function(val){
+    if (!$scope.passColumns.includes(val))
+    $scope.passColumns.push(val);
+    else
+    $scope.passColumns.splice($scope.passColumns.indexOf(val), 1);
+
+};
 
   $scope.ok = function () {
+    console.log("submitted",$scope.passColumns);
     $uibModalInstance.close();
   };
 

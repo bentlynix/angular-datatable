@@ -22,9 +22,9 @@
             <h3 class="modal-title">I'm a modal!</h3>
         </div>
         <div class="modal-body">
-          <div ng-repeat="i in myData">
+          <div ng-repeat="i in myData track by $index">
             <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1" ng-checked="{{i}}">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1" ng-model="active" ng-change="change(i)">
                 <label class="custom-control-label" for="customSwitch1">{{i}} - {{columns[$index]}}</label>
             </div>
           </div>
@@ -53,10 +53,22 @@
           <th>Salary</th>
           <th>Age</th>
           <th>Profile Pic</th>
+          <th>#</th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Age</th>
+          <th>Profile Pic</th>
         </tr>
       </thead>
         <tbody>
           <tr ng-repeat="n in data" ng-click="open(n)">
+            <td>{{$index+1}}</td>
+            <td>{{n[0]}}</td>
+            <td>{{n[1]}}</td>
+            <td>{{n[2]}}</td>
+            <td>{{n[3]}}</td>
+            <td><span class="badge badge-soft-success py-1">Delivered</span></td>
             <td>{{$index+1}}</td>
             <td>{{n[0]}}</td>
             <td>{{n[1]}}</td>
